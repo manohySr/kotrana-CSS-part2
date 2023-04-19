@@ -1,0 +1,58 @@
+body {
+    font-family: cursive;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.7;
+    padding: 3rem; /* 3 * the root unit = 3 rem*/
+}
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom, $color-primary, $color-secondary), url('../images/5.jpg');
+    background-position: top;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.heading-primary {
+    text-transform: uppercase;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 2.5rem;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+    }
+    &--sub {
+        display: block;
+        font-size: 2.5rem;
+        font-weight: 900;
+        animation: moveInRight 1s ease-out;
+        margin-bottom: 4rem
+    }
+}
+
+.heading-secondary {
+    background-image: linear-gradient(to right bottom, $color-primary, $color-secondary);
+    background-clip: text;
+    color: transparent;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    display: inline-block;
+    transition: all .2s;
+
+
+    &:hover {
+        transform: skewX(10deg) skewY(2deg) scale(1.1);
+        text-shadow: 1rem 1rem 1rem rgba($color-black, .2) ;
+    }
+}

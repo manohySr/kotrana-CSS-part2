@@ -56,3 +56,14 @@ body {
         text-shadow: 1rem 1rem 1rem rgba($color-black, .2) ;
     }
 }
+
+.title-paragraph {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $color-dark-grey;
+    text-transform: uppercase;
+}
+.paragraph {
+    font-size: 1.6rem;
+    color: $color-dark-grey;
+}

@@ -1,5 +1,8 @@
 .btn {
-    &:link, &:visited {
+    &,
+    &:link, 
+    &:visited {
+        font-family: inherit;
         display: inline-block;
         text-transform: uppercase;
         text-decoration: none;
@@ -7,7 +10,11 @@
         border-radius: 10rem;
         transition: all .2s;
         position: relative;
-        font-size: 1.6rem;
+        font-size: 1.5rem;
+
+        //change for <button> element
+        border: none;
+        cursor: pointer;
 
     }
     &:hover {
@@ -20,7 +27,9 @@
         }
     }
     
-    &:active {
+    &:active,
+    &:focus {
+        outline: none;
         transform: translateY(-1px);
         box-shadow: 0 .5rem 1rem rgba($color-black, $alpha: .2);
     }
@@ -31,6 +40,16 @@
 
         &::after {
             background-color: $color-white;
+            transition: all .4s;
+        }
+    }
+
+    &--primary-color {
+        color: $color-white;
+        background-color: $color-primary-light;
+
+        &::after {
+            background-color: $color-primary-light;
             transition: all .4s;
         }
     }
@@ -58,9 +77,9 @@
     &:link, 
     &:visited {
         text-decoration: none;
-        color: $color-primary;
-        font-size: 1.8rem;
-        border-bottom: .1rem solid $color-primary;
+        color: $color-primary-light;
+        font-size: 1.5rem;
+        border-bottom: .1rem solid $color-primary-light;
         display: inline-block;
         padding: .3rem;
         cursor: pointer;
@@ -68,7 +87,7 @@
     }
     &:hover {
         transform: translateY(-.2rem);
-        background-color: $color-primary;
+        background-color: $color-primary-light;
         color: $color-light-dark;
         box-shadow: 0 1rem 2rem rgba($color-black, $alpha: .2);
     }

@@ -6,14 +6,6 @@ body {
     padding: 3rem; /* 3 * the root unit = 3 rem*/
 }
 
-.header {
-    height: 95vh;
-    background-image: linear-gradient(to right bottom, $color-primary, $color-secondary), url('../images/5.jpg');
-    background-position: top;
-    background-size: cover;
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-}
-
 .heading-primary {
     text-transform: uppercase;
     position: absolute;
@@ -40,7 +32,7 @@ body {
 }
 
 .heading-secondary {
-    background-image: linear-gradient(to right bottom, $color-primary, $color-secondary);
+    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
     background-clip: text;
     color: transparent;
     font-size: 3.5rem;

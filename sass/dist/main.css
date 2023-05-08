@@ -46,7 +46,8 @@
 }
 
 html {
-  font-size: 62.3%; /*that for inheritance, knowing that the default value is 16px so it's 62.3% of 16px => 10px*/
+  font-size: 62.3%;
+  /*that for inheritance, knowing that the default value is 16px so it's 62.3% of 16px => 10px*/
   scroll-behavior: smooth;
 }
 
@@ -59,7 +60,8 @@ body {
   font-weight: 400;
   color: #fff;
   line-height: 1.7;
-  padding: 3rem; /* 3 * the root unit = 3 rem*/
+  padding: 3rem;
+  /* 3 * the root unit = 3 rem*/
 }
 
 .heading-primary {
@@ -88,8 +90,7 @@ body {
 
 .heading-secondary {
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   color: transparent;
   font-size: 3.5rem;
   text-transform: uppercase;
@@ -314,8 +315,7 @@ body {
   color: transparent;
   display: inline-block;
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   font-size: 6rem;
 }
 .feature-box:hover {
@@ -366,11 +366,10 @@ body {
   background-position: top;
   background-size: cover;
   background-blend-mode: screen;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 .card__picture--1 {
-  background-image: linear-gradient(to right bottom, rgba(255, 191, 0, 0.9176470588), rgba(245, 123, 0, 0.5960784314)), url("../images/5.jpg");
+  background-image: linear-gradient(to right bottom, #ffbf00ea, #f57b0098), url("../images/5.jpg");
 }
 .card__picture--2 {
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("../images/2.jpg");
@@ -391,8 +390,7 @@ body {
 }
 .card__heading-span {
   padding: 1rem 1.5rem;
-  -webkit-box-decoration-break: clone;
-          box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 .card__heading-span--1 {
   background-image: linear-gradient(to right bottom, rgba(255, 191, 0, 0.8), rgba(245, 123, 0, 0.8));
@@ -454,8 +452,7 @@ body {
   height: 15rem;
   float: left;
   shape-outside: circle(50% at 50% 50%);
-  -webkit-clip-path: circle(50% at 50% 50%);
-          clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
   transform: translateX(-3rem) skewX(12deg);
   position: relative;
 }
@@ -502,8 +499,7 @@ body {
 .bg-video__content {
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .form {
@@ -525,16 +521,13 @@ body {
   border-bottom: 3px solid transparent;
   transition: 0.3s all;
 }
-.form__input::-moz-placeholder {
-  color: #999;
-}
 .form__input::placeholder {
   color: #999;
 }
 .form__input:focus {
   outline: none;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-  border-bottom: 3px solid rgba(245, 123, 0, 0.5960784314);
+  border-bottom: 3px solid #f57b0098;
 }
 .form__input:focus:invalid {
   border-bottom: 3px solid #28b485;
@@ -546,10 +539,6 @@ body {
   margin-left: 2rem;
   margin-top: 0.7rem;
   transition: 0.3s all;
-}
-.form__input:-moz-placeholder-shown ~ .form__label {
-  opacity: 0;
-  transform: translateY(-4rem);
 }
 .form__input:placeholder-shown ~ .form__label {
   opacity: 0;
@@ -651,14 +640,10 @@ body {
   font-size: 1.4rem;
   color: #777;
   margin-bottom: 4rem;
-  -moz-column-count: 2;
-       column-count: 2;
-  -moz-column-gap: 4rem;
-       column-gap: 4rem;
-  -moz-column-rule: 1px solid rgba(153, 153, 153, 0.4);
-       column-rule: 1px solid rgba(153, 153, 153, 0.4);
-  -webkit-hyphens: auto;
-          hyphens: auto;
+  column-count: 2;
+  column-gap: 4rem;
+  column-rule: 1px solid rgba(153, 153, 153, 0.4);
+  hyphens: auto;
 }
 .popup__close:link, .popup__close:visited {
   color: #999;
@@ -716,8 +701,7 @@ body {
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../images/5.jpg");
   background-position: top;
   background-size: cover;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
 .footer {

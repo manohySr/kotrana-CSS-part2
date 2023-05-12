@@ -78,7 +78,7 @@ body {
 }
 
 body {
-  font-family: cursive, sans-serif;
+  font-family: sans-serif;
   font-weight: 400;
   color: #fff;
   line-height: 1.7;
@@ -177,6 +177,27 @@ body {
   margin-top: 8rem !important;
 }
 
+@media (max-width: 37.5em) {
+  .u-margin-bottom-small {
+    margin-bottom: 1rem !important;
+  }
+
+  .u-margin-bottom-medium {
+    margin-bottom: 2rem !important;
+  }
+
+  .u-margin-bottom-big {
+    margin-bottom: 4rem !important;
+  }
+
+  .u-margin-top-medium {
+    margin-top: 2rem !important;
+  }
+
+  .u-margin-top-big {
+    margin-top: 4srem !important;
+  }
+}
 .section-about {
   background-color: #f7f7f7;
   padding: 25rem 0;

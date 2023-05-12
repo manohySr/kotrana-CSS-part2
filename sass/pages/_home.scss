@@ -74,4 +74,10 @@
             width: 100%;
         }
     }
+
+    @include respond(phone) {
+        &__form {
+            margin-top: -15vh;
+        }
+    }
 }

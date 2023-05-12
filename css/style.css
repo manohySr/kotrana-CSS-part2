@@ -867,8 +867,8 @@ body {
   transition: 0.8s transform cubic-bezier(0.86, 0, 0.07, 1); }
   @media (max-width: 37.5em) {
     .navigation__background {
-      top: 3rem;
-      right: 3rem; } }
+      top: 3.5rem;
+      right: 3.5rem; } }
 
 .navigation__nav {
   height: 100vh;

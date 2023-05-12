@@ -58,7 +58,7 @@ body {
       padding: 0; } }
 
 body {
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Lato', sans-serif;
   font-weight: 400;
   color: #fff;
   line-height: 1.7; }
@@ -767,13 +767,13 @@ body {
   @supports (clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%)) {
     .header {
       height: 95vh;
-      clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); } }
-  @media (max-width: 56.25em) {
-    .header {
-      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
-  @media (max-width: 37.5em) {
-    .header {
-      clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); } }
+      clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+      @media (max-width: 56.25em) {
+        .header {
+          clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
+      @media (max-width: 37.5em) {
+        .header {
+          clip-path: polygon(0 0, 100% 0, 100% 87vh, 0 100%); } } }
 
 .footer {
   background-color: #333;

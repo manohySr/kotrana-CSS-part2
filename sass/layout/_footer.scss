@@ -48,12 +48,58 @@
             box-shadow: 0 1rem 2rem rgba($color-black, .4);
         }
     }
-
+    
     &__copyright {
         width: 75%;
         border-top: 1px solid $color-dark-grey-2;
         padding-top: 2rem;
         display: inline-block;
         float: right;
+    }
+ 
+    @include respond(tab-port) {
+        background-color: #333;
+        padding-top: 10rem;
+        padding-bottom: 2rem;
+        font-size: 1.4rem;
+    
+        &__logo-box {
+            margin-bottom: 5rem;
+        }
+    
+        &__logo {
+            width: 13rem;
+        }
+    
+        &__navigation {
+            text-align: center;
+            width: 100%;
+        }
+    
+        &__list {
+            list-style: none;
+        }
+    
+        &__item {
+            display: inline-block;
+            &:not(:last-child) {
+                margin-right: .8rem;
+            }
+        }
+    
+        &__link {
+            &:link,
+            &:visited {
+            }
+    
+            &:hover,
+            &:active {
+            }
+        }
+        
+        &__copyright {
+            width: 100%;
+            float: none;
+        }
     }
 }

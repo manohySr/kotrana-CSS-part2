@@ -6,22 +6,48 @@
     border-radius: .3rem;
     background-color: rgba($color-white, .6);
     transform: skewX(-12deg);
+
+    @include respond(phone) {
+        width: 100%;
+    }
+
+    @include respond(phone) {
+        transform: skewX(0);
+        width: 100%;
+    }
     
     &__shape {
         width: 15rem;
         height: 15rem;
         float: left;
-        shape-outside: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
+        border-radius: 50%;
         transform: translateX(-3rem) skewX(12deg);
         position: relative;
+
+        @supports (clip-path: polygon(0 0)) {
+            shape-outside: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            border-radius: 0;
+        }
+
+        @include respond(phone) {
+            transform: translateX(-3rem) skewX(0);
+        }
     }
 
     &__img {
-        width: 100%;
-        transform: scale(1.05);
-        backface-visibility: hidden;
+        border-radius: 50%;
+        width: 15rem;
+        height: 15rem;
         transition: .5s all;
+        @supports (clip-path: polygon(0 0)) {
+            width: 100%;
+            transform: scale(1.05);
+            backface-visibility: hidden;
+            border-radius: none;
+            width: 100%;
+            height: auto;
+        }
     }
 
     &__caption {
@@ -39,6 +65,10 @@
 
     &__text {
         transform: skewX(12deg);
+
+        @include respond(phone) {
+            transform: skewX(0); 
+        }
     }
 
     &:hover &__caption {

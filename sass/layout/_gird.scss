@@ -3,11 +3,34 @@
     margin: 0 auto;
     margin-bottom: $gutter-vertical;
     @include clearfix;
+
+    // @include respond(tab-land) {
+    //     max-width: 100rem;
+    // }
+
+    @include respond(tab-port) {
+        max-width: 60rem;
+        margin-bottom: $gutter-vertical-small;
+    }
+    @include respond(phone) {
+        max-width: 50rem;
+        margin-bottom: $gutter-vertical-small;
+        padding: 0 3rem;
+    }
+}
+
+[class^="col-"] { //how to select all the class which begins with col-
+    float: left;
+
+    @include respond(tab-port) {
+        width: 100%!important;
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+    }
 }
 
 .col-1-of-2 {
     width: calc((100% - #{$gutter-horizontal}) / 2);
-    float: left;
     &:not(:last-child) {
         margin-right: $gutter-horizontal;
     }
@@ -15,7 +38,6 @@
 
 .col-1-of-3 {
     width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
-    float: left;
     &:not(:last-child) {
         margin-right: $gutter-horizontal;
     }
@@ -23,7 +45,6 @@
 
 .col-1-of-4 {
     width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
-    float: left;
     &:not(:last-child) {
         margin-right: $gutter-horizontal;
     }

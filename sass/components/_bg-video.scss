@@ -9,8 +9,11 @@
     z-index: -1;
 
     &__content {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
+        width: 0;
+        @supports (object-fit: cover) {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
     }
 }

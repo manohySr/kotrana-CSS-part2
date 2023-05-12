@@ -10,6 +10,11 @@
     visibility: hidden;
     transition: .3s all;
 
+    @supports (backdrop-filter: blur(10px)) {
+        backdrop-filter: blur(10px);
+        background-color: rgba($color-black, .3);
+    }
+
     &:target {
         opacity: 1;
         visibility: visible;
@@ -66,22 +71,55 @@
     }
 
     &__close {
-       &:link,
-       &:visited {
-        color: $color-dark-grey-2;
-        position: absolute;
-        top: 2.5rem;
-        right: 2.5rem;
-        font-size: 6rem;
-        text-decoration: none;
-        display: inline-block;
-        line-height: .5;
-        transition: .2s all;
-       }
+        &:link,
+        &:visited {
+            color: $color-dark-grey-2;
+            position: absolute;
+            top: 2.5rem;
+            right: 2.5rem;
+            font-size: 6rem;
+            text-decoration: none;
+            display: inline-block;
+            line-height: .5;
+            transition: .2s all;
+        }
 
        &:hover {
         color: $color-primary-dark;
         transform: scale(1.1);
        }
+    }
+
+
+
+    @include respond(phone) {
+        height: 105vh;
+        &__content {
+            height: 70vh;
+            width: 80%;
+            display: block;
+            overflow-y: scroll;
+            padding: 5rem 0;
+        }
+    
+        
+        &__left {
+            width: 60%;
+            margin: 2rem auto;
+            display: block;
+            height: 50%;
+        }
+    
+        &__right {
+            width: 100%;
+            display: block;
+            height: auto;
+        }
+    
+        &__img {
+            width: 100%;
+            height: 50%;
+            display: block;
+        }
     }
 }

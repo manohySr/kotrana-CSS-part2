@@ -78,7 +78,7 @@ body {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: cursive, "Courier New", Courier, monospace;
   font-weight: 400;
   color: #fff;
   line-height: 1.7;
@@ -260,6 +260,11 @@ body {
   }
   .book__form {
     width: 100%;
+  }
+}
+@media (max-width: 37.5em) {
+  .book__form {
+    margin-top: -15vh;
   }
 }
 
